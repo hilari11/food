@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>MEAL</title>
-       <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
             <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
-              <h3>FoodMeal</h3>
+              <h3>Meal</h3>
           </a>
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
@@ -25,7 +25,8 @@
       <h1 align="center">Meal</h1>
         <div class="container mt-3" style="margin-left: 130px;">
             <div class="row mb-3" id="categories"></div>
-	</div>
+		</div>
+		
            <script type="text/javascript">
             // fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
             //     .then(res => res.json())
@@ -40,7 +41,6 @@
 				let categories = "";
 
 				data.categories.forEach((mealData => {
-					//var searchMeal="https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealData.strCategory}";
 					let strCategoryDescription = "";
 					if (mealData.strCategoryDescription) {
 						strCategoryDescription = mealData.strCategoryDescription.slice(0,100)
@@ -48,7 +48,7 @@
 					categories+=
 						`	    <div class="col-3">
 	 						    <img class="card-img-top" src="${mealData.strCategoryThumb}">
-                                 <div class="card-body"> <a>
+                                				<div class="card-body"> <a>
 	 							<h5 class="card-title">${mealData.strCategory}</h5></a>
 	 							<p class"card-text">${strCategoryDescription}</p>
 	 						    </div>							
@@ -60,7 +60,7 @@
 				}));
 			});			
 	    </script>
-	    <footer align="center">
+      <footer align="center">
         <a href="about.html"><p>Get in touch</p></a>
           <a href="https://facebook.com/arci.f.hilari" aria-label="facebook"><i class='fab fa-facebook-f fa-lg'></i></a>
           <a href="https://instagram.com/hilari.id" aria-label="instagram"><i class='fab fa-instagram fa-lg'></i></a>
