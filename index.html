@@ -24,10 +24,10 @@
       <h1 align="center">Meal</h1>
         <div class="container mt-3" style="margin-left: 130px;">
             <div class="row mb-3" id="categories"></div>
-		</div>
-		<div class="container mt-3" style="margin-left: 130px;">
-            <div class="row mb-3" id="meals"></div>
-        </div>
+		//</div>
+		//<div class="container mt-3" style="margin-left: 130px;">
+            //<div class="row mb-3" id="meals"></div>
+        //</div>
            <script type="text/javascript">
             // fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
             //     .then(res => res.json())
@@ -42,7 +42,7 @@
 				let categories = "";
 
 				data.categories.forEach((mealData => {
-					var searchMeal="https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealData.strCategory}";
+					//var searchMeal="https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealData.strCategory}";
 					let strCategoryDescription = "";
 					if (mealData.strCategoryDescription) {
 						strCategoryDescription = mealData.strCategoryDescription.slice(0,100)
@@ -51,7 +51,7 @@
 						`	    <div class="col-3">
 	 						    <img class="card-img-top" src="${mealData.strCategoryThumb}">
                                  <div class="card-body"> <a>
-	 							<h5 class="card-title" id="kategori=https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealData.strCategory}">${mealData.strCategory}</h5></a>
+	 							<h5 class="card-title">${mealData.strCategory}</h5></a>
 	 							<p class"card-text">${strCategoryDescription}</p>
 	 						    </div>							
 						        </div>
