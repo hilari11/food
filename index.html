@@ -41,6 +41,7 @@
 				let categories = "";
 
 				data.categories.forEach((mealData => {
+					
 					let strCategoryDescription = "";
 					if (mealData.strCategoryDescription) {
 						strCategoryDescription = mealData.strCategoryDescription.slice(0,100)
@@ -48,7 +49,7 @@
 					categories+=
 						`	    <div class="col-3">
 	 						    <img class="card-img-top" src="${mealData.strCategoryThumb}">
-                                				<div class="card-body"> <a>
+                                 <div class="card-body"> <a>
 	 							<h5 class="card-title">${mealData.strCategory}</h5></a>
 	 							<p class"card-text">${strCategoryDescription}</p>
 	 						    </div>							
