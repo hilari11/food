@@ -1,0 +1,18 @@
+body,html{margin:0;padding:0;height:100%;
+    /* background:url('https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg'); */
+    /* background-size:cover; */
+}
+.content{
+    margin:0;padding:0;height:100%;
+    font-family: 'Cabin Condensed', sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+svg{
+    font-weight:bold;
+    max-width:900px;
+    height:auto;
+    
+}
